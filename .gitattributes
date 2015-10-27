@@ -1,0 +1,2 @@
+dist/sources/* whitespace=-space-before-tab,-trailing-space
+*.[ch] whitespace=tab-in-indent,trailing-space

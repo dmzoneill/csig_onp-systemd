@@ -1,0 +1,138 @@
+%{
+#include <stddef.h>
+#include "conf-parser.h"
+#include "networkd.h"
+#include "network-internal.h"
+%}
+struct ConfigPerfItem;
+%null_strings
+%language=ANSI-C
+%define slot-name section_and_lvalue
+%define hash-function-name network_swport_gperf_hash
+%define lookup-function-name network_swport_gperf_lookup
+%readonly-tables
+%omit-struct-type
+%struct-type
+%includes
+%%
+Match.Name,                           config_parse_ifname,        0,                 offsetof(SWPort, match_name)
+SWPortAttrs.DefCfi,                   config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_DEF_CFI])
+SWPortAttrs.DefDscp,                  config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_DEF_DSCP])
+SWPortAttrs.DefPri,                   config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_DEF_PRI])
+SWPortAttrs.DefSwpri,                 config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_DEF_SWPRI])
+SWPortAttrs.DropBv,                   config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_DROP_BV])
+SWPortAttrs.DropTagged,               config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_DROP_TAGGED])
+SWPortAttrs.EeeMode,                  config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_EEE_MODE])
+SWPortAttrs.EeeTxActivityTimeout,     config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_EEE_TX_ACTIVITY_TIMEOUT])
+SWPortAttrs.EeeTxLpiTimeout,          config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_EEE_TX_LPI_TIMEOUT])
+SWPortAttrs.FabricLoopback,           config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_FABRIC_LOOPBACK])
+SWPortAttrs.IgnoreIfgErrors,          config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_IGNORE_IFG_ERRORS])
+SWPortAttrs.Learning,                 config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_LEARNING])
+SWPortAttrs.Loopback,                 config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_LOOPBACK])
+SWPortAttrs.ParseMpls,                config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_PARSE_MPLS])
+SWPortAttrs.Parser,                   config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_PARSER])
+SWPortAttrs.ParserStoreMpls,          config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_PARSER_STORE_MPLS])
+SWPortAttrs.ParserVlan1Tag,           config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_PARSER_VLAN1_TAG])
+SWPortAttrs.Tagging,                  config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_TAGGING])
+SWPortAttrs.TimestampGeneration,      config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_TIMESTAMP_GENERATION])
+SWPortAttrs.UpdateDscp,               config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_UPDATE_DSCP])
+SWPortAttrs.UpdateTtl,                config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_UPDATE_TTL])
+SWPortAttrs.Autoneg,                  config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_AUTONEG])
+SWPortAttrs.AutonegBasepage,          config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_AUTONEG_BASEPAGE])
+SWPortAttrs.AutonegLinkInhbTimer,     config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_AUTONEG_LINK_INHB_TIMER])
+SWPortAttrs.AutonegLinkInhbTimerKx,   config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_AUTONEG_LINK_INHB_TIMER_KX])
+SWPortAttrs.ReplaceDscp,              config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_REPLACE_DSCP])
+SWPortAttrs.RoutedFrameUpdateFields,  config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_ROUTED_FRAME_UPDATE_FIELDS])
+SWPortAttrs.RxClassPause,             config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_RX_CLASS_PAUSE])
+SWPortAttrs.RxCutThrough,             config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_RX_CUT_THROUGH])
+SWPortAttrs.SwpriDscpPref,            config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_SWPRI_DSCP_PREF])
+SWPortAttrs.SwpriSource,              config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_SWPRI_SOURCE])
+SWPortAttrs.TxClassPause,             config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_TX_CLASS_PAUSE])
+SWPortAttrs.TxCutThrough,             config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_TX_CUT_THROUGH])
+SWPortAttrs.PauseMode,                config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_PAUSE_MODE])
+SWPortAttrs.DefPri2,                  config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_DEF_PRI2])
+SWPortAttrs.DefVlan2,                 config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_DEF_VLAN2])
+SWPortAttrs.Dot1xState,               config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_DOT1X_STATE])
+SWPortAttrs.ParserVlan2Tag,           config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_PARSER_VLAN2_TAG])
+SWPortAttrs.SecurityAction,           config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_SECURITY_ACTION])
+SWPortAttrs.Tagging2,                 config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_TAGGING2])
+SWPortAttrs.BcastFlooding,            config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_BCAST_FLOODING])
+SWPortAttrs.UcastFlooding,            config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_UCAST_FLOODING])
+SWPortAttrs.McastFlooding,            config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_MCAST_FLOODING])
+SWPortAttrs.McastPruning,             config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_MCAST_PRUNING])
+SWPortAttrs.BcastPruning,             config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_BCAST_PRUNING])
+SWPortAttrs.UcastPruning,             config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_UCAST_PRUNING])
+SWPortAttrs.MacTableAddressAgingTime, config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_MAC_TABLE_ADDRESS_AGING_TIME])
+SWPortAttrs.MaxFrameSize,             config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_MAX_FRAME_SIZE])
+SWPortAttrs.LagMode,                  config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_LAG_MODE])
+SWPortAttrs.SmpLosslessPause,         config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_SMP_LOSSLESS_PAUSE])
+SWPortAttrs.TxVPri,                   config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_TXVPRI])
+L2HashKey.SmacMask,                   config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L2_HASH_KEY_SMAC_MASK])
+L2HashKey.DmacMask,                   config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L2_HASH_KEY_DMAC_MASK])
+L2HashKey.EthertypeMask,              config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L2_HASH_KEY_ETHERTYPE_MASK])
+L2HashKey.VlanId1Mask,                config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L2_HASH_KEY_VLAN_ID_1_MASK])
+L2HashKey.VlanPri1Mask,               config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L2_HASH_KEY_VLAN_PRI_1_MASK])
+L2HashKey.SymmetrizeMac,              config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L2_HASH_KEY_SYMMETRIZE_MAC])
+L2HashKey.UseL3Hash,                  config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L2_HASH_KEY_USE_L3_HASH])
+L2HashKey.UseL2IfIp,                  config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L2_HASH_KEY_USE_L2_IF_IP])
+L3HashConfig.SipMask,                 config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_SIP_MASK])
+L3HashConfig.DipMask,                 config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_DIP_MASK])
+L3HashConfig.L4SrcMask,               config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_L4_SRC_MASK])
+L3HashConfig.L4DstMask,               config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_L4_DST_MASK])
+L3HashConfig.DscpMask,                config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_DSCP_MASK])
+L3HashConfig.IslUserMask,             config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_ISL_USER_MASK])
+L3HashConfig.ProtocolMask,            config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_PROTOCOL_MASK])
+L3HashConfig.FlowMask,                config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_FLOW_MASK])
+L3HashConfig.SymmetrizeL3Fields,      config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_SYMMETRIZE_L3_FIELDS])
+L3HashConfig.EcmpRotation,            config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_ECMP_ROTATION])
+L3HashConfig.Protocol1,               config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_PROTOCOL_1])
+L3HashConfig.Protocol2,               config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_PROTOCOL_2])
+L3HashConfig.UseTcp,                  config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_USE_TCP])
+L3HashConfig.UseUdp,                  config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_USE_UDP])
+L3HashConfig.UseProtocol1,            config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_USE_PROTOCOL_1])
+L3HashConfig.UseProtocol2,            config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_L3_HASH_CONFIG_USE_PROTOCOL_2])
+RateLimit.BcastRate,                  config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_BCAST_RATE])
+RateLimit.BcastCapacity,              config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_BCAST_CAPACITY])
+RateLimit.McastRate,                  config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_MCAST_RATE])
+RateLimit.McastCapacity,              config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_MCAST_CAPACITY])
+RateLimit.CpuMacRate,                 config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_CPU_MAC_RATE])
+RateLimit.CpuMacCapacity,             config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_CPU_MAC_CAPACITY])
+RateLimit.IgmpRate,                   config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_IGMP_RATE])
+RateLimit.IgmpCapacity,               config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_IGMP_CAPACITY])
+RateLimit.IcmpRate,                   config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_ICMP_RATE])
+RateLimit.IcmpCapacity,               config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_ICMP_CAPACITY])
+RateLimit.ReservedMacRate,            config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_RESERVED_MAC_RATE])
+RateLimit.ReservedMacCapacity,        config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_RESERVED_MAC_CAPACITY])
+RateLimit.MtuViolRate,                config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_MTU_VIOL_RATE])
+RateLimit.MtuViolCapacity,            config_parse_swattr,        0,                 offsetof(SWPort, attrs[SWPORT_ATTR_MTU_VIOL_CAPACITY])
+Vlan.Id,                              config_parse_vlanid,        0,                 0
+Vlan.EgressUntagged,                  config_parse_untagged,      0,                 0
+Vlan.Pvid,                            config_parse_pvid,          0,                 0
+QosAttrs.DscpSwpriMap,                config_parse_qos_attrs,     0,                 0
+QosAttrs.GlobalUsage,                 config_parse_qos_attrs,     0,                 0
+QosAttrs.SwpriTcMap,                  config_parse_qos_attrs,     0,                 0
+QosAttrs.TcSmpMap,                    config_parse_qos_attrs,     0,                 0
+QosAttrs.TrapClassSwpriMap,           config_parse_qos_attrs,     0,                 0
+QosAttrs.VpriSwpriMap,                config_parse_qos_attrs,     0,                 0
+QosAttrs.TcEnable,                    config_parse_qos_attrs,     0,                 0
+QosAttrs.TcPcMap,                     config_parse_qos_attrs,     0,                 0
+QosAttrs.PcRxmpMap,                   config_parse_qos_attrs,     0,                 0
+QosAttrs.RxPriorityMap,               config_parse_qos_attrs,     0,                 0
+QosAttrs.TxPriorityMap,               config_parse_qos_attrs,     0,                 0
+QosAttrs.SchedGroupWeight,            config_parse_qos_attrs,     0,                 0
+QosAttrs.SchedGroupStrict,            config_parse_qos_attrs,     0,                 0
+QosAttrs.ShapingGroupMaxRate,         config_parse_qos_attrs,     0,                 0
+QosAttrs.ShapingGroupMinRate,         config_parse_qos_attrs,     0,                 0
+QosAttrs.ShapingGroupMaxBurst,        config_parse_qos_attrs,     0,                 0
+QosAttrs.CirRate,                     config_parse_qos_attrs,     0,                 0
+QosAttrs.CirAction,                   config_parse_qos_attrs,     0,                 0
+QosAttrs.CirCapacity,                 config_parse_qos_attrs,     0,                 0
+QosAttrs.ColorSource,                 config_parse_qos_attrs,     0,                 0
+QosAttrs.EirAction,                   config_parse_qos_attrs,     0,                 0
+QosAttrs.EirCapacity,                 config_parse_qos_attrs,     0,                 0
+QosAttrs.EirRate,                     config_parse_qos_attrs,     0,                 0
+QosAttrs.DscpMkdnMap,                 config_parse_qos_attrs,     0,                 0
+QosAttrs.SwpriMkdnMap,                config_parse_qos_attrs,     0,                 0
+QosAttrs.MkdnDscp,                    config_parse_qos_attrs,     0,                 0
+QosAttrs.MkdnSwpri,                   config_parse_qos_attrs,     0,                 0
+QosAttrs.DelPolicer,                  config_parse_qos_attrs,     0,                 0

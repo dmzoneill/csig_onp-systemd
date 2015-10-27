@@ -1,0 +1,601 @@
+/*-*- Mode: C; c-basic-offset: 8; indent-tabs-mode: nil -*-*/
+
+/***
+  This file is part of systemd.
+
+  Copyright 2013 Tom Gundersen <teg@jklm.no>
+
+  systemd is free software; you can redistribute it and/or modify it
+  under the terms of the GNU Lesser General Public License as published by
+  the Free Software Foundation; either version 2.1 of the License, or
+  (at your option) any later version.
+
+  systemd is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+  Lesser General Public License for more details.
+
+  You should have received a copy of the GNU Lesser General Public License
+  along with systemd; If not, see <http://www.gnu.org/licenses/>.
+***/
+
+#pragma once
+
+#include <arpa/inet.h>
+
+#include "sd-event.h"
+#include "sd-rtnl.h"
+#include "sd-bus.h"
+#include "sd-dhcp-client.h"
+#include "sd-dhcp-server.h"
+#include "sd-ipv4ll.h"
+#include "sd-icmp6-nd.h"
+#include "sd-dhcp6-client.h"
+#include "udev.h"
+
+#include "rtnl-util.h"
+#include "hashmap.h"
+#include "list.h"
+#include "set.h"
+#include "condition-util.h"
+#include "in-addr-util.h"
+
+#define CACHE_INFO_INFINITY_LIFE_TIME 0xFFFFFFFFU
+#define DHCP_ROUTE_METRIC 1024
+#define IPV4LL_ROUTE_METRIC 2048
+
+typedef struct NetDev NetDev;
+typedef struct Network Network;
+typedef struct SWPort SWPort;
+typedef struct Link Link;
+typedef struct Address Address;
+typedef struct SWPortVlanEntry SWPortVlanEntry;
+typedef struct SWPortQoSAttrs SWPortQoSAttrs;
+typedef struct Route Route;
+typedef struct Manager Manager;
+typedef struct AddressPool AddressPool;
+typedef struct FdbEntry FdbEntry;
+
+typedef enum DHCPSupport {
+        DHCP_SUPPORT_NONE,
+        DHCP_SUPPORT_BOTH,
+        DHCP_SUPPORT_V4,
+        DHCP_SUPPORT_V6,
+        _DHCP_SUPPORT_MAX,
+        _DHCP_SUPPORT_INVALID = -1,
+} DHCPSupport;
+
+typedef enum LLMNRSupport {
+        LLMNR_SUPPORT_NO,
+        LLMNR_SUPPORT_YES,
+        LLMNR_SUPPORT_RESOLVE,
+        _LLMNR_SUPPORT_MAX,
+        _LLMNR_SUPPORT_INVALID = -1,
+} LLMNRSupport;
+
+struct FdbEntry {
+        Network *network;
+        unsigned section;
+
+        struct ether_addr *mac_addr;
+        uint16_t vlan_id;
+
+        LIST_FIELDS(FdbEntry, static_fdb_entries);
+};
+
+struct Network {
+        Manager *manager;
+
+        char *filename;
+
+        struct ether_addr *match_mac;
+        char *match_path;
+        char *match_driver;
+        char *match_type;
+        char *match_name;
+        char *dhcp_vendor_class_identifier;
+
+        Condition *match_host;
+        Condition *match_virt;
+        Condition *match_kernel;
+        Condition *match_arch;
+
+        char *description;
+        NetDev *bridge;
+        NetDev *bond;
+        NetDev *team;
+        Hashmap *stacked_netdevs;
+        DHCPSupport dhcp;
+        bool dhcp_dns;
+        bool dhcp_ntp;
+        bool dhcp_mtu;
+        bool dhcp_hostname;
+        bool dhcp_domains;
+        bool dhcp_sendhost;
+        bool dhcp_broadcast;
+        bool dhcp_critical;
+        bool dhcp_routes;
+        unsigned dhcp_route_metric;
+        bool ipv4ll;
+        bool ipv4ll_route;
+
+        bool dhcp_server;
+
+        LIST_HEAD(Address, static_addresses);
+        LIST_HEAD(Route, static_routes);
+        LIST_HEAD(FdbEntry, static_fdb_entries);
+
+        Hashmap *addresses_by_section;
+        Hashmap *routes_by_section;
+        Hashmap *fdb_entries_by_section;
+
+        bool wildcard_domain;
+        char **domains, **dns, **ntp, **bind_carrier;
+
+        LLMNRSupport llmnr;
+
+        LIST_FIELDS(Network, networks);
+};
+
+typedef enum SWPortAttrType {
+        SWPORT_ATTR_DEF_CFI,
+        SWPORT_ATTR_DEF_DSCP,
+        SWPORT_ATTR_DEF_PRI,
+        SWPORT_ATTR_DEF_SWPRI,
+        SWPORT_ATTR_DROP_BV,
+        SWPORT_ATTR_DROP_TAGGED,
+        SWPORT_ATTR_EEE_MODE,
+        SWPORT_ATTR_EEE_TX_ACTIVITY_TIMEOUT,
+        SWPORT_ATTR_EEE_TX_LPI_TIMEOUT,
+        /* Do not change ordering of FabricLoopback and Loopback attributes
+         Loopback can not be changed when FabricLoopback is enabled, to allow
+         configuration where Loopback and FabricLoopback is enabled following
+         ordering is needed */
+        /* Start of FabricLoopback and Loopback section*/
+        SWPORT_ATTR_LOOPBACK,
+        SWPORT_ATTR_FABRIC_LOOPBACK,
+        /* End of Fabricloopback and Loopback section*/
+        SWPORT_ATTR_IGNORE_IFG_ERRORS,
+        SWPORT_ATTR_LEARNING,
+        SWPORT_ATTR_PARSE_MPLS,
+        SWPORT_ATTR_PARSER,
+        SWPORT_ATTR_PARSER_STORE_MPLS,
+        SWPORT_ATTR_PARSER_VLAN1_TAG,
+        SWPORT_ATTR_TAGGING,
+        SWPORT_ATTR_TIMESTAMP_GENERATION,
+        SWPORT_ATTR_UPDATE_DSCP,
+        SWPORT_ATTR_UPDATE_TTL,
+        SWPORT_ATTR_AUTONEG,
+        SWPORT_ATTR_AUTONEG_BASEPAGE,
+        SWPORT_ATTR_AUTONEG_LINK_INHB_TIMER,
+        SWPORT_ATTR_AUTONEG_LINK_INHB_TIMER_KX,
+        SWPORT_ATTR_REPLACE_DSCP,
+        SWPORT_ATTR_ROUTED_FRAME_UPDATE_FIELDS,
+        SWPORT_ATTR_RX_CLASS_PAUSE,
+        SWPORT_ATTR_RX_CUT_THROUGH,
+        SWPORT_ATTR_SWPRI_DSCP_PREF,
+        SWPORT_ATTR_SWPRI_SOURCE,
+        SWPORT_ATTR_TX_CUT_THROUGH,
+        SWPORT_ATTR_PAUSE_MODE,
+        SWPORT_ATTR_DEF_PRI2,
+        SWPORT_ATTR_DEF_VLAN2,
+        SWPORT_ATTR_DOT1X_STATE,
+        SWPORT_ATTR_PARSER_VLAN2_TAG,
+        SWPORT_ATTR_SECURITY_ACTION,
+        SWPORT_ATTR_TAGGING2,
+        SWPORT_ATTR_BCAST_FLOODING,
+        SWPORT_ATTR_UCAST_FLOODING,
+        SWPORT_ATTR_MCAST_FLOODING,
+        SWPORT_ATTR_MCAST_PRUNING,
+        SWPORT_ATTR_BCAST_PRUNING,
+        SWPORT_ATTR_UCAST_PRUNING,
+        SWPORT_ATTR_MAC_TABLE_ADDRESS_AGING_TIME,
+        SWPORT_ATTR_MAX_FRAME_SIZE,
+        SWPORT_ATTR_LAG_MODE,
+        SWPORT_ATTR_L2_HASH_KEY_SMAC_MASK,
+        SWPORT_ATTR_L2_HASH_KEY_DMAC_MASK,
+        SWPORT_ATTR_L2_HASH_KEY_ETHERTYPE_MASK,
+        SWPORT_ATTR_L2_HASH_KEY_VLAN_ID_1_MASK,
+        SWPORT_ATTR_L2_HASH_KEY_VLAN_PRI_1_MASK,
+        SWPORT_ATTR_L2_HASH_KEY_SYMMETRIZE_MAC,
+        SWPORT_ATTR_L2_HASH_KEY_USE_L3_HASH,
+        SWPORT_ATTR_L2_HASH_KEY_USE_L2_IF_IP,
+        SWPORT_ATTR_L3_HASH_CONFIG_SIP_MASK,
+        SWPORT_ATTR_L3_HASH_CONFIG_DIP_MASK,
+        SWPORT_ATTR_L3_HASH_CONFIG_L4_SRC_MASK,
+        SWPORT_ATTR_L3_HASH_CONFIG_L4_DST_MASK,
+        SWPORT_ATTR_L3_HASH_CONFIG_DSCP_MASK,
+        SWPORT_ATTR_L3_HASH_CONFIG_ISL_USER_MASK,
+        SWPORT_ATTR_L3_HASH_CONFIG_PROTOCOL_MASK,
+        SWPORT_ATTR_L3_HASH_CONFIG_FLOW_MASK,
+        SWPORT_ATTR_L3_HASH_CONFIG_SYMMETRIZE_L3_FIELDS,
+        SWPORT_ATTR_L3_HASH_CONFIG_ECMP_ROTATION,
+        SWPORT_ATTR_L3_HASH_CONFIG_PROTOCOL_1,
+        SWPORT_ATTR_L3_HASH_CONFIG_PROTOCOL_2,
+        SWPORT_ATTR_L3_HASH_CONFIG_USE_TCP,
+        SWPORT_ATTR_L3_HASH_CONFIG_USE_UDP,
+        SWPORT_ATTR_L3_HASH_CONFIG_USE_PROTOCOL_1,
+        SWPORT_ATTR_L3_HASH_CONFIG_USE_PROTOCOL_2,
+        SWPORT_ATTR_BCAST_RATE,
+        SWPORT_ATTR_BCAST_CAPACITY,
+        SWPORT_ATTR_MCAST_RATE,
+        SWPORT_ATTR_MCAST_CAPACITY,
+        SWPORT_ATTR_CPU_MAC_RATE,
+        SWPORT_ATTR_CPU_MAC_CAPACITY,
+        SWPORT_ATTR_IGMP_RATE,
+        SWPORT_ATTR_IGMP_CAPACITY,
+        SWPORT_ATTR_ICMP_RATE,
+        SWPORT_ATTR_ICMP_CAPACITY,
+        SWPORT_ATTR_RESERVED_MAC_RATE,
+        SWPORT_ATTR_RESERVED_MAC_CAPACITY,
+        SWPORT_ATTR_MTU_VIOL_RATE,
+        SWPORT_ATTR_MTU_VIOL_CAPACITY,
+        SWPORT_ATTR_TX_CLASS_PAUSE,
+        SWPORT_ATTR_SMP_LOSSLESS_PAUSE,
+        SWPORT_ATTR_TXVPRI,
+        __SWPORT_ATTR_MAX,
+} SWPortAttrType;
+
+#define SWPORT_ATTR_MAX (__SWPORT_ATTR_MAX - 1)
+#define SWPORT_ATTR_COUNT (__SWPORT_ATTR_MAX)
+
+typedef struct SWPortAttr {
+        uint64_t value;
+        bool flag;
+} SWPortAttr;
+
+struct SWPortVlanEntry {
+        SWPort *swport;
+        unsigned section;
+
+        unsigned vid;
+        bool EgressUntagged;
+        bool pvid;
+
+        LIST_FIELDS(SWPortVlanEntry, swport_vlan_enties);
+
+};
+struct SWPortQoSAttrs {
+        int index;
+        uint64_t value;
+        int ifla_attr;
+
+        LIST_FIELDS(SWPortQoSAttrs, swport_qos_attrs);
+
+};
+
+struct SWPort {
+        Manager *manager;
+        Link    *link;
+
+        char *match_name;
+
+        SWPortAttr attrs[SWPORT_ATTR_COUNT];
+
+        LIST_HEAD(SWPortVlanEntry, vlan_entries);
+        LIST_HEAD(SWPortQoSAttrs, qos_attrs);
+        Hashmap *vlan_entries_by_section;
+        Hashmap *existing_vlan_entries_by_vid;
+        bool vlans_configured:1;
+
+        LIST_FIELDS(SWPort, swports);
+};
+
+struct Address {
+        Network *network;
+        unsigned section;
+
+        int family;
+        unsigned char prefixlen;
+        unsigned char scope;
+        unsigned char flags;
+        char *label;
+
+        struct in_addr broadcast;
+        struct ifa_cacheinfo cinfo;
+
+        union in_addr_union in_addr;
+        union in_addr_union in_addr_peer;
+
+        LIST_FIELDS(Address, addresses);
+};
+
+struct Route {
+        Network *network;
+        unsigned section;
+
+        int family;
+        unsigned char dst_prefixlen;
+        unsigned char scope;
+        uint32_t metrics;
+        unsigned char protocol;  /* RTPROT_* */
+
+        union in_addr_union in_addr;
+        union in_addr_union dst_addr;
+        union in_addr_union prefsrc_addr;
+
+        LIST_FIELDS(Route, routes);
+};
+
+struct AddressPool {
+        Manager *manager;
+
+        int family;
+        unsigned prefixlen;
+
+        union in_addr_union in_addr;
+
+        LIST_FIELDS(AddressPool, address_pools);
+};
+
+struct Manager {
+        sd_rtnl *rtnl;
+        sd_event *event;
+        sd_bus *bus;
+        struct udev *udev;
+        struct udev_monitor *udev_monitor;
+        sd_event_source *udev_event_source;
+
+        char *state_file;
+
+        Hashmap *links;
+        Hashmap *netdevs;
+
+        LIST_HEAD(Network, networks);
+        LIST_HEAD(SWPort, swports);
+        LIST_HEAD(SWPort, default_swports);
+        LIST_HEAD(AddressPool, address_pools);
+
+        usec_t network_dirs_ts_usec;
+};
+
+extern const char* const network_dirs[];
+
+/* Manager */
+
+int manager_new(Manager **ret);
+void manager_free(Manager *m);
+
+int manager_load_config(Manager *m);
+bool manager_should_reload(Manager *m);
+
+int manager_rtnl_enumerate_links(Manager *m);
+int manager_rtnl_enumerate_addresses(Manager *m);
+
+int manager_rtnl_listen(Manager *m);
+int manager_udev_listen(Manager *m);
+int manager_bus_listen(Manager *m);
+
+int manager_save(Manager *m);
+
+int manager_address_pool_acquire(Manager *m, int family, unsigned prefixlen, union in_addr_union *found);
+
+DEFINE_TRIVIAL_CLEANUP_FUNC(Manager*, manager_free);
+#define _cleanup_manager_free_ _cleanup_(manager_freep)
+
+int manager_apply_swport_attributes(Manager *m);
+
+/* SWPort */
+
+int swport_load(Manager *m);
+int swport_apply_attributes(SWPort *swport);
+void swport_free(SWPort *swport);
+
+/* Network */
+
+int network_load(Manager *manager);
+
+void network_free(Network *network);
+
+DEFINE_TRIVIAL_CLEANUP_FUNC(Network*, network_free);
+#define _cleanup_network_free_ _cleanup_(network_freep)
+
+int network_get(Manager *manager, struct udev_device *device,
+                const char *ifname, const struct ether_addr *mac,
+                Network **ret);
+int network_apply(Manager *manager, Network *network, Link *link);
+
+int config_parse_netdev(const char *unit, const char *filename, unsigned line,
+                        const char *section, unsigned section_line, const char *lvalue,
+                        int ltype, const char *rvalue, void *data, void *userdata);
+
+int config_parse_domains(const char *unit,
+                         const char *filename,
+                         unsigned line,
+                         const char *section,
+                         unsigned section_line,
+                         const char *lvalue,
+                         int ltype,
+                         const char *rvalue,
+                         void *data,
+                         void *userdata);
+
+int config_parse_tunnel(const char *unit,
+                        const char *filename,
+                        unsigned line,
+                        const char *section,
+                        unsigned section_line,
+                        const char *lvalue,
+                        int ltype,
+                        const char *rvalue,
+                        void *data,
+                        void *userdata);
+
+int config_parse_swattr(const char *unit,
+                        const char *filename,
+                        unsigned line,
+                        const char *section,
+                        unsigned section_line,
+                        const char *lvalue,
+                        int ltype,
+                        const char *rvalue,
+                        void *data,
+                        void *userdata);
+
+int config_parse_qos_attrs(const char *unit,
+                           const char *filename,
+                           unsigned line,
+                           const char *section,
+                           unsigned section_line,
+                           const char *lvalue,
+                           int ltype,
+                           const char *rvalue,
+                           void *data,
+                           void *userdata);
+
+int config_parse_vlanid(const char *unit,
+                        const char *filename,
+                        unsigned line,
+                        const char *section,
+                        unsigned section_line,
+                        const char *lvalue,
+                        int ltype,
+                        const char *rvalue,
+                        void *data,
+                        void *userdata);
+
+int config_parse_untagged(const char *unit,
+                        const char *filename,
+                        unsigned line,
+                        const char *section,
+                        unsigned section_line,
+                        const char *lvalue,
+                        int ltype,
+                        const char *rvalue,
+                        void *data,
+                        void *userdata);
+int config_parse_pvid(const char *unit,
+                        const char *filename,
+                        unsigned line,
+                        const char *section,
+                        unsigned section_line,
+                        const char *lvalue,
+                        int ltype,
+                        const char *rvalue,
+                        void *data,
+                        void *userdata);
+
+int config_parse_tunnel_address(const char *unit,
+                                const char *filename,
+                                unsigned line,
+                                const char *section,
+                                unsigned section_line,
+                                const char *lvalue,
+                                int ltype,
+                                const char *rvalue,
+                                void *data,
+                                void *userdata);
+
+/* gperf */
+const struct ConfigPerfItem* network_network_gperf_lookup(const char *key, unsigned length);
+const struct ConfigPerfItem* network_swport_gperf_lookup(const char *key, unsigned length);
+
+/* Route */
+int route_new_static(Network *network, unsigned section, Route **ret);
+int route_new_dynamic(Route **ret, unsigned char rtm_protocol);
+void route_free(Route *route);
+int route_configure(Route *route, Link *link, sd_rtnl_message_handler_t callback);
+int route_drop(Route *route, Link *link, sd_rtnl_message_handler_t callback);
+
+
+DEFINE_TRIVIAL_CLEANUP_FUNC(Route*, route_free);
+#define _cleanup_route_free_ _cleanup_(route_freep)
+
+int config_parse_gateway(const char *unit, const char *filename, unsigned line,
+                         const char *section, unsigned section_line, const char *lvalue,
+                         int ltype, const char *rvalue, void *data, void *userdata);
+
+int config_parse_destination(const char *unit, const char *filename, unsigned line,
+                             const char *section, unsigned section_line, const char *lvalue,
+                             int ltype, const char *rvalue, void *data, void *userdata);
+
+int config_parse_route_priority(const char *unit, const char *filename, unsigned line,
+                                const char *section, unsigned section_line, const char *lvalue,
+                                int ltype, const char *rvalue, void *data, void *userdata);
+/* Address */
+int address_new_static(Network *network, unsigned section, Address **ret);
+int address_new_dynamic(Address **ret);
+void address_free(Address *address);
+int address_configure(Address *address, Link *link, sd_rtnl_message_handler_t callback);
+int address_update(Address *address, Link *link, sd_rtnl_message_handler_t callback);
+int address_drop(Address *address, Link *link, sd_rtnl_message_handler_t callback);
+bool address_equal(Address *a1, Address *a2);
+
+DEFINE_TRIVIAL_CLEANUP_FUNC(Address*, address_free);
+#define _cleanup_address_free_ _cleanup_(address_freep)
+
+int config_parse_address(const char *unit, const char *filename, unsigned line,
+                         const char *section, unsigned section_line, const char *lvalue,
+                         int ltype, const char *rvalue, void *data, void *userdata);
+
+int config_parse_broadcast(const char *unit, const char *filename, unsigned line,
+                           const char *section, unsigned section_line, const char *lvalue,
+                           int ltype, const char *rvalue, void *data, void *userdata);
+
+int config_parse_label(const char *unit, const char *filename, unsigned line,
+                       const char *section, unsigned section_line, const char *lvalue,
+                       int ltype, const char *rvalue, void *data, void *userdata);
+
+/* Forwarding database table. */
+int fdb_entry_configure(Link *const link, FdbEntry *const fdb_entry);
+void fdb_entry_free(FdbEntry *fdb_entry);
+int fdb_entry_new_static(Network *const network, const unsigned section, FdbEntry **ret);
+int fdb_entries_clear(sd_rtnl *const rtnl, const int ifindex);
+
+DEFINE_TRIVIAL_CLEANUP_FUNC(FdbEntry*, fdb_entry_free);
+#define _cleanup_fdbentry_free_ _cleanup_(fdb_entry_freep)
+
+void vlan_entry_free(SWPortVlanEntry *vlan_entry);
+DEFINE_TRIVIAL_CLEANUP_FUNC(SWPortVlanEntry*, vlan_entry_free);
+#define _cleanup_vlanentry_free_ _cleanup_(vlan_entry_freep)
+
+int config_parse_fdb_hwaddr(const char *unit, const char *filename, unsigned line,
+                            const char *section, unsigned section_line, const char *lvalue,
+                            int ltype, const char *rvalue, void *data, void *userdata);
+
+int config_parse_fdb_vlan_id(const char *unit, const char *filename, unsigned line,
+                             const char *section, unsigned section_line, const char *lvalue,
+                             int ltype, const char *rvalue, void *data, void *userdata);
+
+/* DHCP support */
+
+const char* dhcp_support_to_string(DHCPSupport i) _const_;
+DHCPSupport dhcp_support_from_string(const char *s) _pure_;
+
+int config_parse_dhcp(const char *unit, const char *filename, unsigned line,
+                      const char *section, unsigned section_line, const char *lvalue,
+                      int ltype, const char *rvalue, void *data, void *userdata);
+
+/* LLMNR support */
+
+const char* llmnr_support_to_string(LLMNRSupport i) _const_;
+LLMNRSupport llmnr_support_from_string(const char *s) _pure_;
+
+int config_parse_llmnr(const char *unit, const char *filename, unsigned line,
+                      const char *section, unsigned section_line, const char *lvalue,
+                      int ltype, const char *rvalue, void *data, void *userdata);
+
+/* Address Pool */
+
+int address_pool_new(Manager *m, AddressPool **ret, int family, const union in_addr_union *u, unsigned prefixlen);
+int address_pool_new_from_string(Manager *m, AddressPool **ret, int family, const char *p, unsigned prefixlen);
+void address_pool_free(AddressPool *p);
+
+int address_pool_acquire(AddressPool *p, unsigned prefixlen, union in_addr_union *found);
+
+/* Macros which append INTERFACE= to the message */
+
+#define log_full_link(level, link, fmt, ...) log_meta_object(level, __FILE__, __LINE__, __func__, "INTERFACE=", link->ifname, "%-*s: " fmt, IFNAMSIZ, link->ifname, ##__VA_ARGS__)
+#define log_debug_link(link, ...)       log_full_link(LOG_DEBUG, link, ##__VA_ARGS__)
+#define log_info_link(link, ...)        log_full_link(LOG_INFO, link, ##__VA_ARGS__)
+#define log_notice_link(link, ...)      log_full_link(LOG_NOTICE, link, ##__VA_ARGS__)
+#define log_warning_link(link, ...)     log_full_link(LOG_WARNING, link, ##__VA_ARGS__)
+#define log_error_link(link, ...)       log_full_link(LOG_ERR, link, ##__VA_ARGS__)
+
+#define log_struct_link(level, link, ...) log_struct(level, "INTERFACE=%s", link->ifname, __VA_ARGS__)
+
+#define ADDRESS_FMT_VAL(address)            \
+        (address).s_addr & 0xFF,            \
+        ((address).s_addr >> 8) & 0xFF,     \
+        ((address).s_addr >> 16) & 0xFF,    \
+        (address).s_addr >> 24
