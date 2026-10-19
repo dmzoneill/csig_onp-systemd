@@ -1,23 +1,8 @@
 /*-*- Mode: C; c-basic-offset: 8; indent-tabs-mode: nil -*-*/
 
-/***
-  This file is part of systemd.
-
-  Copyright 2013 Tom Gundersen <teg@jklm.no>
-
-  systemd is free software; you can redistribute it and/or modify it
-  under the terms of the GNU Lesser General Public License as published by
-  the Free Software Foundation; either version 2.1 of the License, or
-  (at your option) any later version.
-
-  systemd is distributed in the hope that it will be useful, but
-  WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-  Lesser General Public License for more details.
-
-  You should have received a copy of the GNU Lesser General Public License
-  along with systemd; If not, see <http://www.gnu.org/licenses/>.
-***/
+/* SPDX-License-Identifier: LGPL-2.1-or-later
+ * Copyright 2013 Tom Gundersen <teg@jklm.no>
+ */
 
 #include <netinet/ether.h>
 #include <linux/if.h>
@@ -897,7 +882,7 @@ static void dhcp6_handler(sd_dhcp6_client *client, int event, void *userdata) {
         }
 }
 
-static void icmp6_router_handler(sd_icmp6_nd *nd, int event, void *userdata) {
+static void icmp6_router_handler(sd_icmp6_nd *icmp6, int event, void *userdata) {
         Link *link = userdata;
         int r;
 
@@ -1994,7 +1979,7 @@ int link_update(Link *link, sd_rtnl_message *m) {
 
         if (link->state == LINK_STATE_LINGER) {
                 link_ref(link);
-                log_info_link(link, "link readded");
+                log_info_link(link, "link re-added");
                 link->state = LINK_STATE_ENSLAVING;
 
                 r = link_new_carrier_maps(link);

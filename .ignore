@@ -1,0 +1,1673 @@
+# jscpd exclusions for vendored upstream systemd.
+# Base: systemd commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (2014-10-05, between tags v216 and v217), subject: build-sys: use linux/memfd.h if available.
+# Each entry below is byte-identical to that upstream commit. Files that differ, and files added in this fork, stay scanned.
+
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/catalog/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/docs/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/factory/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/hwdb/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/m4/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/network/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/po/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/rules/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/shell-completion/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/ac-power/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/activate/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/analyze/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/ask-password/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/backlight/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/binfmt/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/boot/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/bootchart/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/bus-proxyd/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/cgls/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/cgroups-agent/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/cgtop/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/compat-libs/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/console/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/core/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/cryptsetup/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/dbus1-generator/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/debug-generator/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/delta/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/detect-virt/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/efi-boot-generator/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/escape/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/firstboot/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/fsck/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/fstab-generator/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/getty-generator/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/gpt-auto-generator/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/gudev/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/hibernate-resume/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/hostname/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/initctl/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal-remote/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/kernel-install/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-terminal/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-bus/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-daemon/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-event/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-id128/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-login/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-path/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-resolve/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-utf8/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libudev/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/locale/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/login/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/machine/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/machine-id-setup/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/modules-load/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/notify/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/nspawn/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/nss-myhostname/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/nss-mymachines/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/nss-resolve/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/path/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/python-systemd/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/quotacheck/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/random-seed/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/rc-local-generator/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/remount-fs/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/reply-password/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/resolve/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/resolve-host/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/rfkill/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/run/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/linux/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shutdownd/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/sleep/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/socket-proxy/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/sysctl/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/system-update-generator/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemctl/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/sysusers/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/sysv-generator/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/test/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/timedate/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/timesync/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/tmpfiles/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/tty-ask-password-agent/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/accelerometer/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/ata_id/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/cdrom_id/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/collect/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/mtd_probe/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/scsi_id/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/v4l_id/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/update-done/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/update-utmp/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/vconsole/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/sysctl.d/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/system-preset/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/sysusers.d/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/test/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/tmpfiles.d/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/tools/
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/user/
+
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/.dir-locals.el
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/.mailmap
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/.travis.yml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/.vimrc
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/.ycm_extra_conf.py
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/CODING_STYLE
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/DISTRO_PORTING
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/LICENSE.GPL2
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/LICENSE.LGPL2.1
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/LICENSE.MIT
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/Makefile-man.am
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/NEWS
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/README
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/TODO
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/autogen.sh
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/.gitignore
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/binfmt.d.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/bootchart.conf.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/bootctl.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/bootup.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/busctl.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/coredump.conf.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/coredumpctl.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/crypttab.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/custom-html.xsl
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/custom-man.xsl
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/daemon.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/file-hierarchy.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/glib-event-glue.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/halt.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/hostname.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/hostnamectl.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/journalctl.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/journald.conf.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/kernel-command-line.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/kernel-install.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/less-variables.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/libsystemd-pkgconfig.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/locale.conf.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/localectl.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/localtime.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/loginctl.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/logind.conf.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/machine-id.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/machine-info.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/machinectl.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/modules-load.d.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/nss-myhostname.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/os-release.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/pam_systemd.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/resolved.conf.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/runlevel.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd-daemon.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd-id128.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd-journal.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd-login.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_booted.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_creds_get_pid.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_creds_new_from_pid.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_error.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_message_append.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_message_append_array.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_message_append_basic.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_message_append_string_memfd.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_message_append_strv.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_message_get_cookie.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_message_get_monotonic_usec.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_negotiate_fds.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_new.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_open_user.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_path_encode.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_bus_request_name.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_event_add_child.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_event_add_defer.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_event_add_signal.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_event_add_time.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_event_get_fd.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_event_new.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_event_set_name.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_get_seats.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_id128_get_machine.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_id128_randomize.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_id128_to_string.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_is_fifo.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_add_match.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_get_catalog.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_get_cursor.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_get_cutoff_realtime_usec.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_get_data.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_get_fd.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_get_realtime_usec.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_get_usage.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_next.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_open.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_print.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_query_unique.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_seek_head.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_journal_stream_fd.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_listen_fds.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_login_monitor_new.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_notify.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_pid_get_session.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_seat_get_active.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_session_is_active.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_uid_get_state.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sd_watchdog_enabled.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/shutdown.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/standard-options.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sysctl.d.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemctl.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-activate.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-analyze.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-ask-password-console.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-ask-password.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-backlight@.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-binfmt.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-bootchart.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-bus-proxyd.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-bus-proxyd@.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-cat.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-cgls.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-cgtop.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-coredump.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-cryptsetup-generator.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-cryptsetup@.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-debug-generator.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-delta.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-detect-virt.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-efi-boot-generator.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-escape.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-firstboot.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-fsck@.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-fstab-generator.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-getty-generator.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-gpt-auto-generator.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-halt.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-hibernate-resume-generator.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-hibernate-resume@.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-hostnamed.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-inhibit.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-initctl.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-journal-gatewayd.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-journal-remote.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-journal-upload.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-journald.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-localed.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-logind.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-machine-id-setup.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-machined.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-modules-load.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-networkd-wait-online.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-networkd.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-notify.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-nspawn.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-path.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-quotacheck.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-random-seed.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-remount-fs.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-resolved.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-rfkill@.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-run.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-shutdownd.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-sleep.conf.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-socket-proxyd.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-suspend.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-sysctl.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-system-update-generator.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-system.conf.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-sysusers.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-timedated.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-timesyncd.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-tmpfiles.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-tty-ask-password-agent.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-udevd.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-update-done.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-update-utmp.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-user-sessions.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd-vconsole-setup.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.automount.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.device.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.exec.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.journal-fields.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.kill.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.link.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.mount.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.path.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.preset.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.resource-control.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.scope.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.service.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.slice.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.snapshot.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.socket.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.special.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.swap.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.target.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.time.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.timer.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.unit.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/systemd.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/sysusers.d.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/telinit.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/timedatectl.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/timesyncd.conf.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/tmpfiles.d.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/udev.conf.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/udev.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/udevadm.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/user-system-options.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/vconsole.conf.xml
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/.gitignore
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/Makefile
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/.gitignore
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/cat.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/catalog.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/catalog.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/compress.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/compress.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/coredump-vacuum.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/coredump-vacuum.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/coredump.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/coredump.conf
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/coredumpctl.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/fsprg.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/fsprg.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journal-authenticate.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journal-authenticate.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journal-def.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journal-file.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journal-file.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journal-internal.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journal-qrcode.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journal-qrcode.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journal-send.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journal-vacuum.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journal-vacuum.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journal-verify.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journal-verify.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journalctl.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-console.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-console.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-gperf.gperf
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-kmsg.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-kmsg.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-native.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-native.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-rate-limit.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-rate-limit.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-server.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-server.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-stream.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-stream.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-syslog.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-syslog.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-wall.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald-wall.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/journald.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/lookup3.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/lookup3.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/mmap-cache.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/mmap-cache.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/sd-journal.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/stacktrace.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/stacktrace.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-catalog.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-compress-benchmark.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-compress.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-coredump-vacuum.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-journal-enum.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-journal-flush.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-journal-init.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-journal-interleaving.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-journal-match.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-journal-send.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-journal-stream.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-journal-syslog.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-journal-verify.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-journal.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/journal/test-mmap-cache.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/dhcp-internal.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/dhcp-lease-internal.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/dhcp-network.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/dhcp-option.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/dhcp-packet.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/dhcp-protocol.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/dhcp-server-internal.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/dhcp6-internal.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/dhcp6-lease-internal.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/dhcp6-network.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/dhcp6-option.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/dhcp6-protocol.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/ipv4ll-internal.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/ipv4ll-network.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/ipv4ll-packet.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/sd-dhcp-client.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/sd-dhcp-lease.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/sd-dhcp-server.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/sd-dhcp6-client.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/sd-dhcp6-lease.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/sd-icmp6-nd.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/sd-ipv4ll.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/test-dhcp-client.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/test-dhcp-option.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/test-dhcp-server.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/test-dhcp6-client.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/test-icmp6-rs.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd-network/test-ipv4ll.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/.gitignore
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/libsystemd.pc.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/libsystemd.sym.m4
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-network/network-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-network/network-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-rtnl/local-addresses.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-rtnl/local-addresses.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-rtnl/rtnl-internal.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/libsystemd/sd-rtnl/test-rtnl.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-address-pool.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-address.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-bond.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-bond.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-bridge.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-bridge.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-dummy.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-dummy.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-macvlan.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-macvlan.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-tunnel.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-tunnel.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-tuntap.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-tuntap.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-veth.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-veth.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-vlan.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-vlan.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-vxlan.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-netdev-vxlan.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-route.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-wait-online-link.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-wait-online-link.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-wait-online-manager.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-wait-online.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/networkd-wait-online.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/test-network-tables.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/network/test-network.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/.gitignore
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/MurmurHash2.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/MurmurHash2.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/acl-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/acl-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/acpi-fpdt.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/acpi-fpdt.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/af-list.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/af-list.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/apparmor-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/apparmor-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/architecture.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/architecture.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/arphrd-list.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/arphrd-list.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/ask-password-api.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/ask-password-api.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/async.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/async.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/audit.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/audit.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/barrier.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/barrier.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/base-filesystem.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/base-filesystem.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/blkid-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/boot-timestamps.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/boot-timestamps.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/bus-errors.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/bus-label.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/bus-label.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/calendarspec.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/calendarspec.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/capability.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/capability.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/cgroup-show.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/cgroup-show.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/cgroup-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/cgroup-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/clean-ipc.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/clean-ipc.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/clock-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/clock-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/condition-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/condition-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/conf-files.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/conf-files.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/conf-parser.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/conf-parser.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/copy.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/copy.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/def.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/dev-setup.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/dev-setup.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/device-nodes.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/device-nodes.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/dropin.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/dropin.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/efivars.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/efivars.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/env-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/env-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/errno-list.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/errno-list.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/exit-status.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/exit-status.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/fdset.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/fdset.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/fileio-label.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/fileio-label.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/fileio.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/fileio.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/generator.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/generator.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/gpt.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/gunicode.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/gunicode.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/hashmap.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/hashmap.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/ima-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/ima-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/in-addr-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/in-addr-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/initreq.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/install-printf.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/install-printf.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/install.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/install.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/ioprio.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/label.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/label.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/list.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/locale-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/locale-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/log.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/log.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/login-shared.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/login-shared.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/logs-show.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/logs-show.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/macro.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/memfd.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/memfd.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/missing.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/mkdir-label.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/mkdir.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/mkdir.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/nss-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/output-mode.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/pager.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/pager.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/path-lookup.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/path-lookup.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/path-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/path-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/prioq.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/prioq.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/pty.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/pty.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/ptyfwd.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/ptyfwd.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/ratelimit.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/ratelimit.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/refcnt.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/replace-var.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/replace-var.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/ring.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/ring.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/seccomp-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/seccomp-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/securebits.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/selinux-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/selinux-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/set.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/set.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/siphash24.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/siphash24.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/sleep-config.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/sleep-config.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/smack-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/smack-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/socket-label.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/socket-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/socket-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/sparse-endian.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/spawn-ask-password-agent.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/spawn-ask-password-agent.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/spawn-polkit-agent.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/spawn-polkit-agent.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/special.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/specifier.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/specifier.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/strbuf.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/strbuf.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/strxcpyx.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/strxcpyx.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/switch-root.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/switch-root.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/test-tables.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/time-dst.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/time-dst.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/time-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/time-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/udev-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/uid-range.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/uid-range.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/unit-name.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/unit-name.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/utf8.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/utf8.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/utmp-wtmp.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/utmp-wtmp.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/virt.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/virt.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/watchdog.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/watchdog.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/xml.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/shared/xml.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/_sd-common.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-bus-protocol.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-bus-vtable.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-bus.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-daemon.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-dhcp-client.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-dhcp-lease.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-dhcp-server.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-dhcp6-client.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-dhcp6-lease.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-event.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-icmp6-nd.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-id128.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-ipv4ll.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-journal.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-login.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-messages.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-path.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-resolve.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-shutdown.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/systemd/sd-utf8.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/.gitignore
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/.vimrc
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/net/.gitignore
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/net/ethtool-util.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/net/ethtool-util.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-builtin-blkid.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-builtin-btrfs.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-builtin-hwdb.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-builtin-input_id.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-builtin-keyboard.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-builtin-kmod.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-builtin-net_id.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-builtin-net_setup_link.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-builtin-path_id.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-builtin-uaccess.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-builtin-usb_id.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-builtin.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-ctrl.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-event.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-node.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-rules.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev-watch.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev.conf
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev.h
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udev.pc.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udevadm-control.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udevadm-hwdb.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udevadm-info.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udevadm-monitor.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udevadm-settle.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udevadm-test-builtin.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udevadm-test.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udevadm-trigger.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udevadm.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/src/udev/udevd.c
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/.gitignore
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/basic.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/bluetooth.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/busnames.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/console-getty.service.m4.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/console-shell.service.m4.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/container-getty@.service.m4.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/cryptsetup-pre.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/cryptsetup.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/debug-shell.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/dev-hugepages.mount
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/dev-mqueue.mount
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/emergency.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/emergency.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/final.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/getty.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/getty@.service.m4
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/graphical.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/halt-local.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/halt.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/hibernate.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/hybrid-sleep.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/initrd-cleanup.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/initrd-fs.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/initrd-parse-etc.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/initrd-root-fs.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/initrd-switch-root.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/initrd-switch-root.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/initrd-udevadm-cleanup-db.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/initrd.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/kexec.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/kmod-static-nodes.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/ldconfig.service
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/local-fs-pre.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/local-fs.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/machine.slice
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/multi-user.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/network-online.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/network-pre.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/network.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/nss-lookup.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/nss-user-lookup.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/org.freedesktop.hostname1.busname
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/org.freedesktop.locale1.busname
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/org.freedesktop.login1.busname
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/org.freedesktop.machine1.busname
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/org.freedesktop.resolve1.busname
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/org.freedesktop.systemd1.busname
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/org.freedesktop.timedate1.busname
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/paths.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/poweroff.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/printer.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/proc-sys-fs-binfmt_misc.automount
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/proc-sys-fs-binfmt_misc.mount
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/quotaon.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/rc-local.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/reboot.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/remote-fs-pre.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/remote-fs.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/rescue.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/rescue.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/rpcbind.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/serial-getty@.service.m4
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/shutdown.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/sigpwr.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/sleep.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/slices.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/smartcard.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/sockets.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/sound.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/suspend.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/swap.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/sys-fs-fuse-connections.mount
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/sys-kernel-config.mount
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/sys-kernel-debug.mount
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/sysinit.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/syslog.socket
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/system-update.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/system.slice
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-ask-password-console.path
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-ask-password-console.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-ask-password-wall.path
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-ask-password-wall.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-backlight@.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-binfmt.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-bus-proxyd.socket
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-bus-proxyd@.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-firstboot.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-fsck-root.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-fsck@.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-halt.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-hibernate-resume@.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-hibernate.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-hostnamed.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-hybrid-sleep.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-initctl.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-initctl.socket
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-journal-catalog-update.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-journal-flush.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-journal-gatewayd.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-journal-gatewayd.socket
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-journal-remote.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-journal-remote.socket
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-journal-upload.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-journald-dev-log.socket
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-journald.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-journald.socket
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-kexec.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-localed.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-logind.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-machined.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-modules-load.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-networkd-wait-online.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-nspawn@.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-poweroff.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-quotacheck.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-random-seed.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-reboot.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-remount-fs.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-resolved.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-rfkill@.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-shutdownd.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-shutdownd.socket
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-suspend.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-sysctl.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-sysusers.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-timedated.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-timesyncd.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-tmpfiles-clean.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-tmpfiles-clean.timer
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-tmpfiles-setup-dev.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-tmpfiles-setup.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-udev-hwdb-update.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-udev-settle.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-udev-trigger.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-udevd-control.socket
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-udevd-kernel.socket
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-udevd.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-update-done.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-update-utmp-runlevel.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-update-utmp.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-user-sessions.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/systemd-vconsole-setup.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/time-sync.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/timers.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/tmp.mount
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/umount.target
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/user.slice
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/user@.service.in
+# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/units/x-.slice

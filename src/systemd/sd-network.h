@@ -3,25 +3,10 @@
 #ifndef foosdnetworkhfoo
 #define foosdnetworkhfoo
 
-/***
-  This file is part of systemd.
-
-  Copyright 2011 Lennart Poettering
-  Copyright 2014 Tom Gundersen
-
-  systemd is free software; you can redistribute it and/or modify it
-  under the terms of the GNU Lesser General Public License as published by
-  the Free Software Foundation; either version 2.1 of the License, or
-  (at your option) any later version.
-
-  systemd is distributed in the hope that it will be useful, but
-  WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-  Lesser General Public License for more details.
-
-  You should have received a copy of the GNU Lesser General Public License
-  along with systemd; If not, see <http://www.gnu.org/licenses/>.
-***/
+/* SPDX-License-Identifier: LGPL-2.1-or-later
+ * Copyright 2011 Lennart Poettering
+ * Copyright 2014 Tom Gundersen
+ */
 
 #include <sys/types.h>
 #include <inttypes.h>
@@ -61,7 +46,7 @@ int sd_network_get_operational_state(char **state);
 int sd_network_get_dns(char ***dns);
 
 /* Get NTP entries for all links. These are domain names or string
- * reperesentations of IP addresses */
+ * representations of IP addresses */
 int sd_network_get_ntp(char ***ntp);
 
 /* Get the search/routing domains for all links. */
@@ -80,7 +65,7 @@ int sd_network_get_domains(char ***domains);
  */
 int sd_network_link_get_setup_state(int ifindex, char **state);
 
-/* Get operatinal state from ifindex.
+/* Get operational state from ifindex.
  * Possible states:
  *   off: the device is powered down
  *   no-carrier: the device is powered up, but it does not yet have a carrier
@@ -101,7 +86,7 @@ int sd_network_link_get_network_file(int ifindex, char **filename);
 int sd_network_link_get_dns(int ifindex, char ***addr);
 
 /* Get NTP entries for a given link. These are domain names or string
- * reperesentations of IP addresses */
+ * representations of IP addresses */
 int sd_network_link_get_ntp(int ifindex, char ***addr);
 
 /* Indicates whether or not LLMNR should be enabled for the link

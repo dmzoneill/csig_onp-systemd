@@ -1,23 +1,8 @@
 /*-*- Mode: C; c-basic-offset: 8; indent-tabs-mode: nil -*-*/
 
-/***
-  This file is part of systemd.
-
-  Copyright (C) 2014 Intel Corporation. All rights reserved.
-
-  systemd is free software; you can redistribute it and/or modify it
-  under the terms of the GNU Lesser General Public License as published by
-  the Free Software Foundation; either version 2.1 of the License, or
-  (at your option) any later version.
-
-  systemd is distributed in the hope that it will be useful, but
-  WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-  Lesser General Public License for more details.
-
-  You should have received a copy of the GNU Lesser General Public License
-  along with systemd; If not, see <http://www.gnu.org/licenses/>.
-***/
+/* SPDX-License-Identifier: LGPL-2.1-or-later
+ * Copyright (C) 2014 Intel Corporation. All rights reserved.
+ */
 
 #include <netinet/ether.h>
 #include <arpa/inet.h>
@@ -227,62 +212,11 @@ static int netdev_team_create(NetDev *netdev) {
         Team *team = TEAM(netdev);
 
         assert(netdev);
-        assert(netdev->manager);
-        assert(netdev->manager->rtnl);
         assert(team);
 
-        r = sd_rtnl_message_new_link(netdev->manager->rtnl, &m, RTM_NEWLINK, 0);
-        if (r < 0) {
-                log_error_netdev(netdev,
-                                 "Could not allocate RTM_NEWLINK message: %s",
-                                 strerror(-r));
+        r = netdev_newlink_message(netdev, NULL, &m);
+        if (r < 0)
                 return r;
-        }
-
-        r = sd_rtnl_message_append_string(m, IFLA_IFNAME, netdev->ifname);
-        if (r < 0) {
-                log_error_netdev(netdev,
-                                 "Could not append IFLA_IFNAME, attribute: %s",
-                                 strerror(-r));
-                return r;
-        }
-
-        if (netdev->mac) {
-                r = sd_rtnl_message_append_ether_addr(m, IFLA_ADDRESS, netdev->mac);
-                if (r < 0) {
-                        log_error_netdev(netdev,
-                                         "Could not append IFLA_ADDRESS attribute: %s",
-                                         strerror(-r));
-                    return r;
-                }
-        }
-
-        if (netdev->mtu) {
-                r = sd_rtnl_message_append_u32(m, IFLA_MTU, netdev->mtu);
-                if (r < 0) {
-                        log_error_netdev(netdev,
-                                         "Could not append IFLA_MTU attribute: %s",
-                                         strerror(-r));
-                        return r;
-                }
-        }
-
-        r = sd_rtnl_message_open_container(m, IFLA_LINKINFO);
-        if (r < 0) {
-                log_error_netdev(netdev,
-                                 "Could not append IFLA_LINKINFO attribute: %s",
-                                 strerror(-r));
-                return r;
-        }
-
-        r = sd_rtnl_message_open_container_union(m, IFLA_INFO_DATA,
-                                                 netdev_kind_to_string(netdev->kind));
-        if (r < 0) {
-                log_error_netdev(netdev,
-                                 "Could not append IFLA_INFO_DATA attribute: %s",
-                                 strerror(-r));
-                return r;
-        }
 
         r = sd_rtnl_message_close_container(m);
         if (r < 0) {

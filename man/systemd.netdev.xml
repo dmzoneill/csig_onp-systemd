@@ -1,41 +1,13 @@
 <?xml version='1.0'?> <!--*-nxml-*-->
 <!DOCTYPE refentry PUBLIC "-//OASIS//DTD DocBook XML V4.2//EN"
-        "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd">
+        "http://www.oasis-open.org/docbook/xml/4.2/docbookx.dtd" [
+<!ENTITY network-file-search SYSTEM "networkd-file-search.ent">
+]>
+<!-- SPDX-License-Identifier: LGPL-2.1-or-later. Copyright 2013 Tom Gundersen. -->
 
-<!--
-  This file is part of systemd.
+<refentry id="systemd.netdev" conditional='ENABLE_NETWORKD' xmlns:xi="http://www.w3.org/2001/XInclude">
 
-  Copyright 2013 Tom Gundersen
-
-  systemd is free software; you can redistribute it and/or modify it
-  under the terms of the GNU Lesser General Public License as published by
-  the Free Software Foundation; either version 2.1 of the License, or
-  (at your option) any later version.
-
-  systemd is distributed in the hope that it will be useful, but
-  WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-  Lesser General Public License for more details.
-
-  You should have received a copy of the GNU Lesser General Public License
-  along with systemd; If not, see <http://www.gnu.org/licenses/>.
--->
-
-<refentry id="systemd.netdev" conditional='ENABLE_NETWORKD'>
-
-        <refentryinfo>
-                <title>systemd.network</title>
-                <productname>systemd</productname>
-
-                <authorgroup>
-                        <author>
-                                <contrib>Developer</contrib>
-                                <firstname>Tom</firstname>
-                                <surname>Gundersen</surname>
-                                <email>teg@jklm.no</email>
-                        </author>
-                </authorgroup>
-        </refentryinfo>
+        <xi:include href="networkd-refentryinfo.xml"/>
 
         <refmeta>
                 <refentrytitle>systemd.netdev</refentrytitle>
@@ -66,20 +38,7 @@
                 netdev will not be changed by networkd.</para>
 
                 <para>The <filename>.netdev</filename> files are read from the files located in the
-                system network directory <filename>/usr/lib/systemd/network</filename>,
-                the volatile runtime network directory
-                <filename>/run/systemd/network</filename> and the local administration
-                network directory <filename>/etc/systemd/network</filename>.
-                All configuration files are collectively sorted and processed in lexical order,
-                regardless of the directories in which they live. However, files with
-                identical filenames replace each other. Files in
-                <filename>/etc</filename> have the highest priority, files in
-                <filename>/run</filename> take precedence over files with the same
-                name in <filename>/usr/lib</filename>. This can be used to override a
-                system-supplied configuration file with a local file if needed; a symlink in
-                <filename>/etc</filename> with the same name as a configuration file in
-                <filename>/usr/lib</filename>, pointing to <filename>/dev/null</filename>,
-                disables the configuration file entirely.</para>
+                &network-file-search;</para>
 
         </refsect1>
 
@@ -91,48 +50,10 @@
                 environment, or if the section is empty. The following keys are accepted:</para>
 
                         <variablelist class='network-directives'>
-                                <varlistentry>
-                                        <term><varname>Host=</varname></term>
-                                        <listitem>
-                                                <para>Matches against the hostname or machine ID of the
-                                                host. See <literal>ConditionHost=</literal> in
-                                                <citerefentry><refentrytitle>systemd.unit</refentrytitle><manvolnum>5</manvolnum></citerefentry>
-                                                for details.
-                                                </para>
-                                        </listitem>
-                                </varlistentry>
-                                <varlistentry>
-                                        <term><varname>Virtualization=</varname></term>
-                                        <listitem>
-                                                <para>Checks whether the system is executed in a virtualized
-                                                environment and optionally test whether it is a specific
-                                                implementation. See <literal>ConditionVirtualization=</literal> in
-                                                <citerefentry><refentrytitle>systemd.unit</refentrytitle><manvolnum>5</manvolnum></citerefentry>
-                                                for details.
-                                                </para>
-                                        </listitem>
-                                </varlistentry>
-                                <varlistentry>
-                                        <term><varname>KernelCommandLine=</varname></term>
-                                        <listitem>
-                                                <para>Checks whether a specific kernel command line option is
-                                                set (or if prefixed with the exclamation mark unset). See
-                                                <literal>ConditionKernelCommandLine=</literal> in
-                                                <citerefentry><refentrytitle>systemd.unit</refentrytitle><manvolnum>5</manvolnum></citerefentry>
-                                                for details.
-                                                </para>
-                                        </listitem>
-                                </varlistentry>
-                                <varlistentry>
-                                        <term><varname>Architecture=</varname></term>
-                                        <listitem>
-                                                <para>Checks whether the system is running on a specific
-                                                architecture. See <literal>ConditionArchitecture=</literal> in
-                                                <citerefentry><refentrytitle>systemd.unit</refentrytitle><manvolnum>5</manvolnum></citerefentry>
-                                                for details.
-                                                </para>
-                                        </listitem>
-                                </varlistentry>
+                        <xi:include href="networkd-match-conditions.xml" xpointer="element(/1/1)"/>
+                        <xi:include href="networkd-match-conditions.xml" xpointer="element(/1/2)"/>
+                        <xi:include href="networkd-match-conditions.xml" xpointer="element(/1/3)"/>
+                        <xi:include href="networkd-match-conditions.xml" xpointer="element(/1/4)"/>
                         </variablelist>
 
         </refsect1>
@@ -178,7 +99,7 @@
                                                 <para>The maximum transmission unit in bytes to
                                                 set for the device. The usual suffixes K, M, G,
                                                 are supported and are understood to the base of
-                                                1024. This key is not currently suported for
+                                                1024. This key is not currently supported for
                                                 <literal>tun</literal> or <literal>tap</literal> devices.
                                                 </para>
                                         </listitem>
@@ -190,7 +111,7 @@
                                                 If none is given, one is generated based on
                                                 the interface name and the
                                                 <citerefentry><refentrytitle>machine-id</refentrytitle><manvolnum>5</manvolnum></citerefentry>.
-                                                This key is not currently suported for <literal>tun</literal> or <literal>tap</literal> devices.
+                                                This key is not currently supported for <literal>tun</literal> or <literal>tap</literal> devices.
                                                 </para>
                                         </listitem>
                                 </varlistentry>
