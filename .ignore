@@ -245,12 +245,8 @@
 /man/.gitignore
 # Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
 /man/binfmt.d.xml
-# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
-/man/bootchart.conf.xml
-# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
-/man/bootctl.xml
-# Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
-/man/bootup.xml
+# Unmodified upstream manual pages whose names begin with boot, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
+/man/boot*.xml
 # Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).
 /man/busctl.xml
 # Unmodified upstream systemd source, byte-identical to commit 27c64db6dff88ebe9761dfe3b0c073d2a9bf2e41 (v216..v217).

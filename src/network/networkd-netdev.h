@@ -6,137 +6,144 @@
 
 #pragma once
 
-#include "networkd.h"
-#include "hashmap.h"
-#include "list.h"
-#include "set.h"
-#include "condition-util.h"
-#include "in-addr-util.h"
+#include <string.h>
+
+#include "network/networkd.h"
+#include "shared/condition-util.h"
+#include "shared/hashmap.h"
+#include "shared/in-addr-util.h"
+#include "shared/list.h"
+#include "shared/set.h"
 
 typedef struct NetDevVTable NetDevVTable;
 
 typedef struct netdev_join_callback netdev_join_callback;
 
 struct netdev_join_callback {
-        sd_rtnl_message_handler_t callback;
-        Link *link;
+  sd_rtnl_message_handler_t callback;
+  Link *link;
 
-        LIST_FIELDS(netdev_join_callback, callbacks);
+  LIST_FIELDS(netdev_join_callback, callbacks);
 };
 
 typedef enum NetDevKind {
-        NETDEV_KIND_BRIDGE,
-        NETDEV_KIND_BOND,
-        NETDEV_KIND_VLAN,
-        NETDEV_KIND_MACVLAN,
-        NETDEV_KIND_VXLAN,
-        NETDEV_KIND_IPIP,
-        NETDEV_KIND_GRE,
-        NETDEV_KIND_SIT,
-        NETDEV_KIND_VETH,
-        NETDEV_KIND_VTI,
-        NETDEV_KIND_DUMMY,
-        NETDEV_KIND_TUN,
-        NETDEV_KIND_TAP,
-        NETDEV_KIND_TEAM,
-        _NETDEV_KIND_MAX,
-        _NETDEV_KIND_INVALID = -1
+  NETDEV_KIND_BRIDGE,
+  NETDEV_KIND_BOND,
+  NETDEV_KIND_VLAN,
+  NETDEV_KIND_MACVLAN,
+  NETDEV_KIND_VXLAN,
+  NETDEV_KIND_IPIP,
+  NETDEV_KIND_GRE,
+  NETDEV_KIND_SIT,
+  NETDEV_KIND_VETH,
+  NETDEV_KIND_VTI,
+  NETDEV_KIND_DUMMY,
+  NETDEV_KIND_TUN,
+  NETDEV_KIND_TAP,
+  NETDEV_KIND_TEAM,
+  _NETDEV_KIND_MAX,
+  _NETDEV_KIND_INVALID = -1
 } NetDevKind;
 
 typedef enum NetDevState {
-        NETDEV_STATE_FAILED,
-        NETDEV_STATE_CREATING,
-        NETDEV_STATE_READY,
-        NETDEV_STATE_LINGER,
-        _NETDEV_STATE_MAX,
-        _NETDEV_STATE_INVALID = -1,
+  NETDEV_STATE_FAILED,
+  NETDEV_STATE_CREATING,
+  NETDEV_STATE_READY,
+  NETDEV_STATE_LINGER,
+  _NETDEV_STATE_MAX,
+  _NETDEV_STATE_INVALID = -1,
 } NetDevState;
 
 typedef enum NetDevCreateType {
-        NETDEV_CREATE_INDEPENDENT,
-        NETDEV_CREATE_MASTER,
-        NETDEV_CREATE_STACKED,
-        _NETDEV_CREATE_MAX,
-        _NETDEV_CREATE_INVALID = -1,
+  NETDEV_CREATE_INDEPENDENT,
+  NETDEV_CREATE_MASTER,
+  NETDEV_CREATE_STACKED,
+  _NETDEV_CREATE_MAX,
+  _NETDEV_CREATE_INVALID = -1,
 } NetDevCreateType;
 
 struct NetDev {
-        Manager *manager;
+  Manager *manager;
 
-        int n_ref;
+  int n_ref;
 
-        char *filename;
+  char *filename;
 
-        Condition *match_host;
-        Condition *match_virt;
-        Condition *match_kernel;
-        Condition *match_arch;
+  Condition *match_host;
+  Condition *match_virt;
+  Condition *match_kernel;
+  Condition *match_arch;
 
-        NetDevState state;
-        NetDevKind kind;
-        char *description;
-        char *ifname;
-        struct ether_addr *mac;
-        size_t mtu;
-        int ifindex;
+  NetDevState state;
+  NetDevKind kind;
+  char *description;
+  char *ifname;
+  struct ether_addr *mac;
+  size_t mtu;
+  int ifindex;
 
-        LIST_HEAD(netdev_join_callback, callbacks);
+  LIST_HEAD(netdev_join_callback, callbacks);
 };
 
-#include "networkd-netdev-bridge.h"
-#include "networkd-netdev-bond.h"
-#include "networkd-netdev-vlan.h"
-#include "networkd-netdev-macvlan.h"
-#include "networkd-netdev-vxlan.h"
-#include "networkd-netdev-veth.h"
-#include "networkd-netdev-tunnel.h"
-#include "networkd-netdev-dummy.h"
-#include "networkd-netdev-tuntap.h"
-#include "networkd-netdev-team.h"
+#include "network/networkd-netdev-bond.h"
+#include "network/networkd-netdev-bridge.h"
+#include "network/networkd-netdev-dummy.h"
+#include "network/networkd-netdev-macvlan.h"
+#include "network/networkd-netdev-team.h"
+#include "network/networkd-netdev-tunnel.h"
+#include "network/networkd-netdev-tuntap.h"
+#include "network/networkd-netdev-veth.h"
+#include "network/networkd-netdev-vlan.h"
+#include "network/networkd-netdev-vxlan.h"
 
 struct NetDevVTable {
-        /* How much memory does an object of this unit type need */
-        size_t object_size;
+  /* How much memory does an object of this unit type need */
+  size_t object_size;
 
-        /* Config file sections this netdev kind understands, separated
-         * by NUL chars */
-        const char *sections;
+  /* Config file sections this netdev kind understands, separated
+   * by NUL chars */
+  const char *sections;
 
-        /* This should reset all type-specific variables. This should
-         * not allocate memory, and is called with zero-initialized
-         * data. It should hence only initialize variables that need
-         * to be set != 0. */
-        void (*init)(NetDev *n);
+  /* This should reset all type-specific variables. This should
+   * not allocate memory, and is called with zero-initialized
+   * data. It should hence only initialize variables that need
+   * to be set != 0. */
+  void (*init)(NetDev *n);
 
-        /* This should free all kind-specific variables. It should be
-         * idempotent. */
-        void (*done)(NetDev *n);
+  /* This should free all kind-specific variables. It should be
+   * idempotent. */
+  void (*done)(NetDev *n);
 
-        /* fill in message to create netdev */
-        int (*fill_message_create)(NetDev *netdev, Link *link, sd_rtnl_message *message);
+  /* fill in message to create netdev */
+  int (*fill_message_create)(NetDev *netdev, Link *link,
+                             sd_rtnl_message *message);
 
-        /* specifies if netdev is independent, or a master device or a stacked device */
-        NetDevCreateType create_type;
+  /* specifies if netdev is independent, or a master device or a stacked device
+   */
+  NetDevCreateType create_type;
 
-        /* create netdev, if not done via rtnl */
-        int (*create)(NetDev *netdev);
+  /* create netdev, if not done via rtnl */
+  int (*create)(NetDev *netdev);
 
-        /* verify that compulsory configuration options were specified */
-        int (*config_verify)(NetDev *netdev, const char *filename);
+  /* verify that compulsory configuration options were specified */
+  int (*config_verify)(NetDev *netdev, const char *filename);
 };
 
-extern const NetDevVTable * const netdev_vtable[_NETDEV_KIND_MAX];
+extern const NetDevVTable *const netdev_vtable[_NETDEV_KIND_MAX];
 
 #define NETDEV_VTABLE(n) netdev_vtable[(n)->kind]
 
 /* For casting a netdev into the various netdev kinds */
-#define DEFINE_CAST(UPPERCASE, MixedCase)                                   \
-        static inline MixedCase* UPPERCASE(NetDev *n) {                     \
-                if (_unlikely_(!n || n->kind != NETDEV_KIND_##UPPERCASE))   \
-                        return NULL;                                        \
-                                                                            \
-                return (MixedCase*) n;                                      \
-        }
+#define DEFINE_CAST(UPPERCASE, MixedCase)                                      \
+  static inline MixedCase *UPPERCASE(NetDev *n) {                              \
+    MixedCase *cast_result;                                                    \
+    if (_unlikely_(!n || n->kind != NETDEV_KIND_##UPPERCASE)) {                \
+      return NULL;                                                             \
+    }                                                                          \
+                                                                               \
+    memcpy(&cast_result, &n, sizeof(cast_result));                             \
+    return cast_result;                                                        \
+  }
 
 /* For casting the various netdev kinds into a netdev */
 #define NETDEV(n) (&(n)->meta)
@@ -162,12 +169,13 @@ void netdev_drop(NetDev *netdev);
 NetDev *netdev_unref(NetDev *netdev);
 NetDev *netdev_ref(NetDev *netdev);
 
-DEFINE_TRIVIAL_CLEANUP_FUNC(NetDev*, netdev_unref);
+DEFINE_TRIVIAL_CLEANUP_FUNC(NetDev *, netdev_unref);
 #define _cleanup_netdev_unref_ _cleanup_(netdev_unrefp)
 
 int netdev_get(Manager *manager, const char *name, NetDev **ret);
 int netdev_set_ifindex(NetDev *netdev, sd_rtnl_message *newlink);
-int netdev_enslave(NetDev *netdev, Link *link, sd_rtnl_message_handler_t callback);
+int netdev_enslave(NetDev *netdev, Link *link,
+                   sd_rtnl_message_handler_t callback);
 int netdev_get_mac(const char *ifname, struct ether_addr **ret);
 int netdev_join(NetDev *netdev, Link *link, sd_rtnl_message_handler_t cb);
 int netdev_newlink_message(NetDev *netdev, Link *link, sd_rtnl_message **ret);
@@ -175,20 +183,34 @@ int netdev_newlink_message(NetDev *netdev, Link *link, sd_rtnl_message **ret);
 const char *netdev_kind_to_string(NetDevKind d) _const_;
 NetDevKind netdev_kind_from_string(const char *d) _pure_;
 
-int config_parse_netdev_kind(const char *unit, const char *filename, unsigned line, const char *section, unsigned section_line, const char *lvalue, int ltype, const char *rvalue, void *data, void *userdata);
+int config_parse_netdev_kind(const char *unit, const char *filename,
+                             unsigned line, const char *section,
+                             unsigned section_line, const char *lvalue,
+                             int ltype, const char *rvalue, void *data,
+                             void *userdata);
 
 /* gperf */
-const struct ConfigPerfItem* network_netdev_gperf_lookup(const char *key, unsigned length);
+const struct ConfigPerfItem *network_netdev_gperf_lookup(const char *key,
+                                                         unsigned length);
 
 /* Macros which append INTERFACE= to the message */
 
-#define log_full_netdev(level, netdev, fmt, ...) log_meta_object(level, __FILE__, __LINE__, __func__, "INTERFACE=", netdev->ifname, "%-*s: " fmt, IFNAMSIZ, netdev->ifname, ##__VA_ARGS__)
-#define log_debug_netdev(netdev, ...)       log_full_netdev(LOG_DEBUG, netdev, ##__VA_ARGS__)
-#define log_info_netdev(netdev, ...)        log_full_netdev(LOG_INFO, netdev, ##__VA_ARGS__)
-#define log_notice_netdev(netdev, ...)      log_full_netdev(LOG_NOTICE, netdev, ##__VA_ARGS__)
-#define log_warning_netdev(netdev, ...)     log_full_netdev(LOG_WARNING, netdev,## __VA_ARGS__)
-#define log_error_netdev(netdev, ...)       log_full_netdev(LOG_ERR, netdev, ##__VA_ARGS__)
+#define log_full_netdev(level, netdev, fmt, ...)                               \
+  log_meta_object(level, __FILE__, __LINE__, __func__,                         \
+                  "INTERFACE=", netdev->ifname, "%-*s: " fmt, IFNAMSIZ,        \
+                  netdev->ifname, ##__VA_ARGS__)
+#define log_debug_netdev(netdev, ...)                                          \
+  log_full_netdev(LOG_DEBUG, netdev, ##__VA_ARGS__)
+#define log_info_netdev(netdev, ...)                                           \
+  log_full_netdev(LOG_INFO, netdev, ##__VA_ARGS__)
+#define log_notice_netdev(netdev, ...)                                         \
+  log_full_netdev(LOG_NOTICE, netdev, ##__VA_ARGS__)
+#define log_warning_netdev(netdev, ...)                                        \
+  log_full_netdev(LOG_WARNING, netdev, ##__VA_ARGS__)
+#define log_error_netdev(netdev, ...)                                          \
+  log_full_netdev(LOG_ERR, netdev, ##__VA_ARGS__)
 
-#define log_struct_netdev(level, netdev, ...) log_struct(level, "INTERFACE=%s", netdev->ifname, __VA_ARGS__)
+#define log_struct_netdev(level, netdev, ...)                                  \
+  log_struct(level, "INTERFACE=%s", netdev->ifname, __VA_ARGS__)
 
 #define NETDEVIF(netdev) "INTERFACE=%s", netdev->ifname

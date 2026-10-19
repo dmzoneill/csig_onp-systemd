@@ -715,10 +715,7 @@ EXTRA_DIST += \
 	man/systemd.index.xml \
 	man/index.html \
 	man/systemd.directives.xml \
-	man/glib-event-glue.c \
-	man/networkd-refentryinfo.xml \
-	man/networkd-match-conditions.xml \
-	man/networkd-file-search.ent
+	man/glib-event-glue.c
 
 CLEANFILES += \
 	man/systemd.index.xml \

@@ -8,10 +8,10 @@
 
 typedef struct Team Team;
 
-#include "networkd-netdev.h"
+#include "network/networkd-netdev.h"
 
 struct Team {
-        NetDev meta;
+  NetDev meta;
 };
 
 extern const NetDevVTable team_vtable;
