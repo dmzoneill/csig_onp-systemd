@@ -75,7 +75,7 @@ void strv_free(char **l) {
 char **strv_copy(char *const *l) {
   char **r, **k;
 
-  k = r = new (char *, strv_length(l) + 1);
+  k = r = new(char *, strv_length(l) + 1);
   if (!r) {
     return NULL;
   }
@@ -134,7 +134,7 @@ char **strv_new_ap(const char *x, va_list ap) {
     va_end(aq);
   }
 
-  a = new (char *, n + 1);
+  a = new(char *, n + 1);
   if (!a) {
     return NULL;
   }
@@ -230,7 +230,7 @@ char **strv_split(const char *s, const char *separator) {
   FOREACH_WORD_SEPARATOR(word, l, s, separator, state)
   n++;
 
-  r = new (char *, n + 1);
+  r = new(char *, n + 1);
   if (!r) {
     return NULL;
   }
@@ -266,7 +266,7 @@ int strv_split_quoted(char ***t, const char *s) {
     return -EINVAL;
   }
 
-  r = new (char *, n + 1);
+  r = new(char *, n + 1);
   if (!r) {
     return -ENOMEM;
   }
@@ -332,7 +332,7 @@ char *strv_join(char **l, const char *separator) {
     n += strlen(*s);
   }
 
-  r = new (char, n + 1);
+  r = new(char, n + 1);
   if (!r) {
     return NULL;
   }
@@ -420,7 +420,7 @@ int strv_push_prepend(char ***l, char *value) {
   }
 
   n = strv_length(*l);
-  c = new (char *, n + 2);
+  c = new(char *, n + 2);
   if (!c) {
     return -ENOMEM;
   }

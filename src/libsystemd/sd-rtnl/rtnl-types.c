@@ -135,8 +135,8 @@ static const NLType rtnl_link_info_data_ipvti_types[IFLA_VTI_MAX + 1] = {
 };
 
 /* these strings must match the .kind entries in the kernel */
-static const char
-    *const nl_union_link_info_data_table[_NL_UNION_LINK_INFO_DATA_MAX] = {
+static const char *const
+    nl_union_link_info_data_table[_NL_UNION_LINK_INFO_DATA_MAX] = {
         [NL_UNION_LINK_INFO_DATA_BOND] = "bond",
         [NL_UNION_LINK_INFO_DATA_BRIDGE] = "bridge",
         [NL_UNION_LINK_INFO_DATA_VLAN] = "vlan",

@@ -31,9 +31,9 @@
 #define DUMP_LAG_VLAN(prefix, vinfo)                                           \
   do {                                                                         \
     printf("%-" STRINGIFY(IF_NAMESIZE) "s %-4u%s%s\n", (prefix), (vinfo)->vid, \
-           (vinfo)->flags &BRIDGE_VLAN_INFO_PVID ? " PVID" : "",               \
-           (vinfo)->flags &BRIDGE_VLAN_INFO_UNTAGGED ? " Egress Untagged"      \
-                                                     : "");                    \
+           (vinfo)->flags & BRIDGE_VLAN_INFO_PVID ? " PVID" : "",              \
+           (vinfo)->flags & BRIDGE_VLAN_INFO_UNTAGGED ? " Egress Untagged"     \
+                                                      : "");                   \
   } while (0)
 
 static bool arg_no_pager = false;
