@@ -1,32 +1,17 @@
 /*-*- Mode: C; c-basic-offset: 8; indent-tabs-mode: nil -*-*/
 
-#ifndef foosdnetworkhfoo
-#define foosdnetworkhfoo
+#ifndef SRC_SYSTEMD_SD_NETWORK_H_
+#define SRC_SYSTEMD_SD_NETWORK_H_
 
-/***
-  This file is part of systemd.
+/* SPDX-License-Identifier: LGPL-2.1-or-later
+ * Copyright 2011 Lennart Poettering
+ * Copyright 2014 Tom Gundersen
+ */
 
-  Copyright 2011 Lennart Poettering
-  Copyright 2014 Tom Gundersen
-
-  systemd is free software; you can redistribute it and/or modify it
-  under the terms of the GNU Lesser General Public License as published by
-  the Free Software Foundation; either version 2.1 of the License, or
-  (at your option) any later version.
-
-  systemd is distributed in the hope that it will be useful, but
-  WITHOUT ANY WARRANTY; without even the implied warranty of
-  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
-  Lesser General Public License for more details.
-
-  You should have received a copy of the GNU Lesser General Public License
-  along with systemd; If not, see <http://www.gnu.org/licenses/>.
-***/
-
-#include <sys/types.h>
 #include <inttypes.h>
+#include <sys/types.h>
 
-#include "_sd-common.h"
+#include "systemd/_sd-common.h"
 
 /*
  * A few points:
@@ -61,7 +46,7 @@ int sd_network_get_operational_state(char **state);
 int sd_network_get_dns(char ***dns);
 
 /* Get NTP entries for all links. These are domain names or string
- * reperesentations of IP addresses */
+ * representations of IP addresses */
 int sd_network_get_ntp(char ***ntp);
 
 /* Get the search/routing domains for all links. */
@@ -69,25 +54,23 @@ int sd_network_get_domains(char ***domains);
 
 /* Get setup state from ifindex.
  * Possible states:
- *   pending: udev is still processing the link, we don't yet know if we will manage it
- *   failed: networkd failed to manage the link
- *   configuring: in the process of retrieving configuration or configuring the link
- *   configured: link configured successfully
- *   unmanaged: networkd is not handling the link
- *   linger: the link is gone, but has not yet been dropped by networkd
- * Possible return codes:
- *   -ENODATA: networkd is not aware of the link
+ *   pending: udev is still processing the link, we don't yet know if we will
+ * manage it failed: networkd failed to manage the link configuring: in the
+ * process of retrieving configuration or configuring the link configured: link
+ * configured successfully unmanaged: networkd is not handling the link linger:
+ * the link is gone, but has not yet been dropped by networkd Possible return
+ * codes: -ENODATA: networkd is not aware of the link
  */
 int sd_network_link_get_setup_state(int ifindex, char **state);
 
-/* Get operatinal state from ifindex.
+/* Get operational state from ifindex.
  * Possible states:
  *   off: the device is powered down
  *   no-carrier: the device is powered up, but it does not yet have a carrier
  *   dormant: the device has a carrier, but is not yet ready for normal traffic
  *   carrier: the link has a carrier
- *   degraded: the link has carrier and addresses valid on the local link configured
- *   routable: the link has carrier and routable address configured
+ *   degraded: the link has carrier and addresses valid on the local link
+ * configured routable: the link has carrier and routable address configured
  * Possible return codes:
  *   -ENODATA: networkd is not aware of the link
  */
@@ -101,7 +84,7 @@ int sd_network_link_get_network_file(int ifindex, char **filename);
 int sd_network_link_get_dns(int ifindex, char ***addr);
 
 /* Get NTP entries for a given link. These are domain names or string
- * reperesentations of IP addresses */
+ * representations of IP addresses */
 int sd_network_link_get_ntp(int ifindex, char ***addr);
 
 /* Indicates whether or not LLMNR should be enabled for the link
@@ -130,7 +113,7 @@ typedef struct sd_network_monitor sd_network_monitor;
 int sd_network_monitor_new(sd_network_monitor **ret, const char *category);
 
 /* Destroys the passed monitor. Returns NULL. */
-sd_network_monitor* sd_network_monitor_unref(sd_network_monitor *m);
+sd_network_monitor *sd_network_monitor_unref(sd_network_monitor *m);
 
 /* Flushes the monitor */
 int sd_network_monitor_flush(sd_network_monitor *m);
@@ -142,7 +125,8 @@ int sd_network_monitor_get_fd(sd_network_monitor *m);
 int sd_network_monitor_get_events(sd_network_monitor *m);
 
 /* Get timeout for poll(), as usec value relative to CLOCK_MONOTONIC's epoch */
-int sd_network_monitor_get_timeout(sd_network_monitor *m, uint64_t *timeout_usec);
+int sd_network_monitor_get_timeout(sd_network_monitor *m,
+                                   uint64_t *timeout_usec);
 
 /* Get setup state for uplink failure detection group_id.
  * Possible states:
@@ -166,4 +150,4 @@ int sd_network_ufd_get_group_list(char ***groups);
 
 _SD_END_DECLARATIONS;
 
-#endif
+#endif /* SRC_SYSTEMD_SD_NETWORK_H_ */

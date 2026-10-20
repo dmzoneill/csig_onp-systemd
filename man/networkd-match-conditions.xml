@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!-- Match keys shared by systemd.network(5) and systemd.netdev(5). -->
+<variablelist>
+  <varlistentry id="net-match-host">
+    <term><varname>Host=</varname></term>
+    <listitem>
+      <para>Matches against the hostname or machine ID of the
+      host. See <literal>ConditionHost=</literal> in
+      <citerefentry><refentrytitle>systemd.unit</refentrytitle><manvolnum>5</manvolnum></citerefentry>
+      for details.
+      </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry id="net-match-virtualization">
+    <term><varname>Virtualization=</varname></term>
+    <listitem>
+      <para>Checks whether the system is executed in a virtualized
+      environment and optionally test whether it is a specific
+      implementation. See <literal>ConditionVirtualization=</literal> in
+      <citerefentry><refentrytitle>systemd.unit</refentrytitle><manvolnum>5</manvolnum></citerefentry>
+      for details.
+      </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry id="net-match-kernel">
+    <term><varname>KernelCommandLine=</varname></term>
+    <listitem>
+      <para>Checks whether a specific kernel command line option is
+      set (or if prefixed with the exclamation mark unset). See
+      <literal>ConditionKernelCommandLine=</literal> in
+      <citerefentry><refentrytitle>systemd.unit</refentrytitle><manvolnum>5</manvolnum></citerefentry>
+      for details.
+      </para>
+    </listitem>
+  </varlistentry>
+  <varlistentry id="net-match-architecture">
+    <term><varname>Architecture=</varname></term>
+    <listitem>
+      <para>Checks whether the system is running on a specific
+      architecture. See <literal>ConditionArchitecture=</literal> in
+      <citerefentry><refentrytitle>systemd.unit</refentrytitle><manvolnum>5</manvolnum></citerefentry>
+      for details.
+      </para>
+    </listitem>
+  </varlistentry>
+</variablelist>
