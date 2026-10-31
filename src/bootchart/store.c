@@ -292,7 +292,7 @@ schedstat_next:
                         }
                         buf[s] = '\0';
 
-                        if (!sscanf(buf, "%s %*s %*s", key))
+                        if (sscanf(buf, "%s %*s %*s", key) != 1)
                                 continue;
 
                         strscpy(ps->name, sizeof(ps->name), key);
@@ -310,7 +310,7 @@ schedstat_next:
                         if (!m)
                                 continue;
 
-                        if (!sscanf(m, "%*s %*s %s", t))
+                        if (sscanf(m, "%*s %*s %s", t) != 1)
                                 continue;
 
                         r = safe_atod(t, &ps->starttime);
@@ -330,7 +330,7 @@ schedstat_next:
                         st = fdopen(fd, "r");
                         if (!st)
                                 continue;
-                        if (!fscanf(st, "%*s %*s %*s %i", &p)) {
+                        if (fscanf(st, "%*s %*s %*s %i", &p) != 1) {
                                 continue;
                         }
                         ps->ppid = p;
@@ -397,7 +397,7 @@ schedstat_next:
                 }
                 buf[s] = '\0';
 
-                if (!sscanf(buf, "%s %s %*s", rt, wt))
+                if (sscanf(buf, "%s %s %*s", rt, wt) != 2)
                         continue;
 
                 ps->sample->next = new0(struct ps_sched_struct, 1);
@@ -498,7 +498,7 @@ catch_rename:
                         }
                         buf[s] = '\0';
 
-                        if (!sscanf(buf, "%s %*s %*s", key))
+                        if (sscanf(buf, "%s %*s %*s", key) != 1)
                                 continue;
 
                         strscpy(ps->name, sizeof(ps->name), key);
