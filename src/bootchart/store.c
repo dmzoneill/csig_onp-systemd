@@ -1,4 +1,5 @@
 /*-*- Mode: C; c-basic-offset: 8; indent-tabs-mode: nil -*-*/
+// clang-format off
 
 /***
   This file is part of systemd.
@@ -509,3 +510,4 @@ catch_rename:
                 }
         }
 }
+// clang-format on
